@@ -1,0 +1,84 @@
+ Problems / Clustering Customers
+Clustering Customers
+Max. Marks: 1
+Problem Statement - Question 1
+
+Future Group has built an attractive portfolio of some of the fastest growing consumer brands in India. Around 400 million customers walk into their stores each year and choose products and services supplied by over 30,000 small, medium and large entrepreneurs and manufacturers from across India.
+
+Future Group employs a staggering 36000 people directly from every section of Indian society. Not just employment, the group wants to usher positive socio-economic changes across all section of India societies.
+
+In retail, Big Bazaar is the most popular brand by Future Group. Big Bazaar has retail outlets across major metropolitan cities in India. The company wants to use machine learning to better understand customer behaviour and understand their buying needs better.
+
+In this problem, you've to predict clusters of customers by store location. Knowing the set of customers that behave evenly will help them target their product promotions accordingly.
+
+Download Dataset
+
+Data Description
+
+The dataset consists of Big Bazar consumers. Question 2 contains the complete data set. For this problem, you'll be working on a sample of that data set.
+
+BigBazaar runs various loyalty programs, festive offers which provide their customer more opportunities to avail discounts. Customers can use these offers or loyalty program to either avail discount or make payment.
+
+products.csv 
+This file contains products transaction information and highlights the discounts used by customers in each transaction.
+
+Variable	Description
+customerID	unique customer ID
+DOB	date of birth of customer
+Gender	Gender
+State	customer's state
+PinCode	pincode of area where customer lives
+transactionDate	date of transaction
+store_code	unique code of big bazaar store
+store_description	description of store
+till_no	counter no. in the store
+transaction_number_by_till	unique transaction number by counter
+promo_code	if promotional code (offer) used in the transaction
+promo_description	description of the offer
+product_code	unique code of the product purchased
+product_description	description of the product purchased
+sale_price_after_promo	sale price of the product after applying promotion
+discountUsed	after promo, customer used this discount(s) on transaction
+tenderModes.csv 
+This file contains information on payment mode(s) used by a customer in making a transaction.
+
+Variable	Description
+customerID	unique customer ID
+DOB	date of birth of customer
+Gender	Gender
+State	customer's state
+PinCode	pincode of area where customer lives
+transactionDate	date of transaction
+store_code	unique code of big bazaar store
+store_description	description of store
+till_no	counter no. in the store
+tender_type	mode used to make payment
+transaction_number_by_till	unique transaction number by counter
+payment_amount_by_tender	amount paid using the payment mode
+PaymentUsed	description of mode of payment
+
+
+Submission Format
+
+The submission file should be a zip containing a .txt and .csv file. Both should have 11972 rows. 
+.txt file should contain the matrix / ndarrays you are using to create clusters. 
+.csv should contain the cluster of customers against every store. 
+Check the sample submission file for correct format. You also have to submit a presentation (or document) explaining your approach.
+
+
+
+Evaluation Metric
+
+Submission will be evaluated based on:
+
+score = silhouttescore - (weight * silhouttescore)
+
+The weight applied is based on the number of clusters of customers per store. You can read more about this metric here.
+
+Scripts
+
+kmeans python starter - Click Here
+kmeans R starter - Click Here
+Note
+
+[Oct 17, 23:01] - Your performance on clustering problem will also be evaluated based on your approach shared. For recommendation, LB score is final.
